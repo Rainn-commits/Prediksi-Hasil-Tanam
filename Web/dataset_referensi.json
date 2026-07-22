@@ -1,0 +1,33 @@
+{
+  "output_mapping": {
+    "low": {
+      "range": "< 1.5",
+      "label": "Tanaman A",
+      "description": "Low Yield"
+    },
+    "medium": {
+      "range": "1.5 - < 2.5",
+      "label": "Tanaman B",
+      "description": "Medium Yield"
+    },
+    "high": {
+      "range": ">= 2.5",
+      "label": "Tanaman C",
+      "description": "High Yield"
+    }
+  },
+  "rules": [
+    {
+      "rule": "IF N tinggi AND P tinggi AND K tinggi AND pH netral THEN hasil tinggi",
+      "crisp_output": 3.0
+    },
+    {
+      "rule": "IF N sedang AND P sedang AND K sedang THEN hasil sedang",
+      "crisp_output": 2.0
+    },
+    {
+      "rule": "IF N rendah OR pH asam THEN hasil rendah",
+      "crisp_output": 1.0
+    }
+  ]
+}
