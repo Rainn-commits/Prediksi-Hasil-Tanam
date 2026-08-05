@@ -9,7 +9,6 @@ public class Plant {
         this.type = type;
     }
 
-    // Getter dan Setter
     public String getName() { return name; }
     public String getType() { return type; }
 }

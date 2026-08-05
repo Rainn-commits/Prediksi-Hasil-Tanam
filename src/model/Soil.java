@@ -19,7 +19,6 @@ public class Soil {
         this.rainfall = rainfall;
     }
 
-    // Getter dan Setter
     public double getN() { return n; }
     public double getP() { return p; }
     public double getK() { return k; }

@@ -63,7 +63,6 @@ const inferensiFuzzy = (inputMap) => {
     return sum === 0 ? 0 : total / sum;
 };
 
-/* ================= INPUT MANUAL ================= */
 document.getElementById("fuzzy-form").addEventListener("submit", e => {
 
     e.preventDefault();
@@ -87,7 +86,6 @@ document.getElementById("fuzzy-form").addEventListener("submit", e => {
     let confidence = (crisp - minOutput) / (maxOutput - minOutput);
     confidence = Math.max(0, Math.min(1, confidence));
 
-    /* ===== INTERPRETASI YIELD ===== */
     let yieldLabel;
     if (crisp >= 2.5) {
         yieldLabel = "High Yield";
@@ -107,7 +105,6 @@ document.getElementById("fuzzy-form").addEventListener("submit", e => {
         fuzzyLevel = "Low";
     }
 
-    /* ===== OUTPUT ===== */
     document.getElementById("crisp-value").innerHTML =
         `Crisp Output: <b>${crisp.toFixed(2)}</b>`;
 
@@ -117,8 +114,6 @@ document.getElementById("fuzzy-form").addEventListener("submit", e => {
     document.getElementById("confidence").innerHTML =
         `Fuzzy Degree (0–1): <b>${confidence.toFixed(2)}</b> (${fuzzyLevel})`;
 });
-
-/* ================= DATASET REFERENSI (DISPLAY ONLY) ================= */
 
 const datasetReferensi = [
   { "N": 91, "P": 94, "K": 46, "temperature": 29.36792366, "humidity": 76.24900101, "ph": 6.149934034, "rainfall": 92.82840911 },
